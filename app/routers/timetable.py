@@ -7,6 +7,7 @@ GET  /api/timetable/{view}/{row}      → one row (e.g. a single room or staff m
 PUT  /api/timetable/{view}/{row}/{day} → overwrite a day's slots for one row
 GET  /api/timetable/constants         → DAYS, TIME_SLOTS, ROOMS, LABS, STAFF lists
 """
+from typing import Any
 
 from fastapi import APIRouter, Header, HTTPException
 from app.models.schema import Session, ViewMode
